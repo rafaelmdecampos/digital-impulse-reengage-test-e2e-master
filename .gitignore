@@ -1,0 +1,13 @@
+# Dependency directory
+node_modules
+.npm
+npm-debug.log
+reports
+debug.log
+.vscode
+output.csv
+tags
+tags.temp
+package-lock.json
+apache-jmeter-5.3
+jmeter-results

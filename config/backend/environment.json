@@ -1,0 +1,10 @@
+{
+    "demo": {
+        "automated": {
+            "manager": {
+                "local": "localhost:5000/v1",
+                "production": "https://test-automated.omniplat.io/v1"
+            }
+        }
+    }
+}

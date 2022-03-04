@@ -1,0 +1,50 @@
+{
+    "admin":{
+        "staging": "https://admin.shopback.io/",
+        "production": "https://admin.shopback.io/",
+        "loginData": {
+            "user": "no-oms-automated@linx.com.br",
+            "pass": "g99M1RtM"
+        }
+    },
+    "dashboard":{
+        "staging": "https://dashboard.shopback.io/",
+        "production": "https://dashboard.shopback.io/",
+        "loginData": {
+            "user": "no-oms-automated@linx.com.br",
+            "pass": "g99M1RtM"
+        }
+    },
+    "shoptarget":{
+        "staging": "https://target.shopback.io/",
+        "production": "https://target.shopback.io/",
+        "loginData": {
+            "user": "no-oms-automated@linx.com.br",
+            "pass": "g99M1RtM"
+        }
+    },
+    "webpush":{
+        "staging": "https://push.shopback.io/",
+        "production": "https://push.shopback.io/",
+        "loginData": {
+            "user": "no-oms-automated@linx.com.br",
+            "pass": "g99M1RtM"
+        }
+    },
+    "shopconvert":{
+        "staging": "https://convert.shopback.io/",
+        "production": "https://convert.shopback.io/",
+        "loginData": {
+            "user": "no-oms-automated@linx.com.br",
+            "pass": "g99M1RtM"
+        }
+    },
+    "mail-nc":{
+        "staging": "https://mail.chaordic.com.br/",
+        "production": "https://mail.chaordic.com.br/",
+        "loginData": {
+            "user": "emerson.ramalho@chaordicsystems.com",
+            "pass": "Oglupa12*12"
+        }
+    }
+}

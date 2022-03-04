@@ -1,0 +1,54 @@
+{
+    "chrome": {
+        "browserName": "chrome",
+        "chromeOptions": {
+            "args": [
+                "--start-maximized",
+                "no-sandbox",
+                "--disable-gpu",
+                "--window-size=1280,960",
+                "whitelisted-ips=192.168.157.51"
+            ],
+            "prefs": {
+                "profile.managed_default_content_settings.notifications": 1,
+                "profile.managed_default_content_settings.popups": 1
+            }
+        }
+    },
+    "firefox": {
+        "browserName": "firefox",
+        "moz:firefoxOptions": {
+            "args": [
+                "--safe-mode",
+                "--start-maximized",
+                "--window-size=1280,960",
+                "whitelisted-ips=192.168.157.51"
+            ]
+        }
+    },
+    "headlessChrome": {
+        "browserName": "chrome",
+        "chromeOptions": {
+            "args": [
+                "--headless",
+                "--start-maximized",
+                "no-sandbox",
+                "--disable-gpu",
+                "--window-size=1280,960",
+                "whitelisted-ips=192.168.157.51"
+            ]
+        }
+    },
+    "headlessFirefox": {
+        "browserName": "firefox",
+        "moz:firefoxOptions": {
+            "args": [
+                "--headless",
+                "--safe-mode",
+                "--start-maximized",
+                "--window-size=1280,960",
+                "whitelisted-ips=192.168.157.51"
+            ]
+        }
+    }
+}

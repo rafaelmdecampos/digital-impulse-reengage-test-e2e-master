@@ -1,0 +1,56 @@
+version: 2
+
+jobs:
+  build:
+    machine:
+      docker_layer_caching: true
+      working_directory: ~/digital-impulse-reengage-test-e2e
+    steps:
+      - checkout
+      - run:
+          name: Build Docker
+          command: docker build -t digital-impulse-reengage-test-e2e:latest .
+      - run:
+          name: Style Check
+          command: make style-check
+      - run:
+          name: Check Build
+          command: make test-build-check-in-container
+  publish:
+    docker:
+      - image: circleci/python:3
+
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Install AWS CLI
+          command: pip install awscli --upgrade --user
+      - run:
+          name: Login to AWS ECR
+          command: python -m awscli ecr get-login --no-include-email --region $AWS_REGION | bash
+      - run:
+          name: Change Permission in package.sh
+          command: chmod 777 package.sh
+      - run:
+          name: Build image and push to ECR
+          command: ./package.sh
+workflows:
+  version: 2
+  main:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              only: /.*/
+      - publish:
+          requires:
+            - build
+          filters:
+            tags:
+              ignore: /.*/
+            branches:
+              only: master
